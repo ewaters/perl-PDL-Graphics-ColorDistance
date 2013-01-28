@@ -4,5 +4,7 @@ color_distance.pp
 Makefile.PL
 MANIFEST
 README.pod
+META.yml
+META.json
 t/ciede2000testdata.txt
 t/color_distance.t

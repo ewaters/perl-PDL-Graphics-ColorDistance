@@ -3,5 +3,6 @@ color_distance.h
 color_distance.pp
 Makefile.PL
 MANIFEST
+README.pod
 t/ciede2000testdata.txt
 t/color_distance.t

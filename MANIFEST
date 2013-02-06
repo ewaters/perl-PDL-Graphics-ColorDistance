@@ -1,10 +1,14 @@
 color_distance.c
 color_distance.h
 color_distance.pp
+ColorDistance.pm
+ColorDistance.xs
 Makefile.PL
 MANIFEST
-README.pod
-META.yml
 META.json
+META.yml
+pdlmaker.plm
+README.pod
+README.txt
 t/ciede2000testdata.txt
 t/color_distance.t

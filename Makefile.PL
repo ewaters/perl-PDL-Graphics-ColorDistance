@@ -1,9 +1,11 @@
 use PDL::Core::Dev;
 use ExtUtils::MakeMaker;
 PDL::Core::Dev->import();
+require "pdlmaker.plm";
 
 $package = ["color_distance.pp",ColorDistance,PDL::Graphics::ColorDistance];
-%hash = pdlpp_stdargs($package);
+#%hash = pdlpp_stdargs($package);
+%hash = pdlmaker_init($package);
 $hash{'OBJECT'} .= ' color_distance$(OBJ_EXT)';
 $hash{'clean'}{FILES} .= ' color_distance$(OBJ_EXT)';
 
@@ -16,9 +18,8 @@ WriteMakefile( %hash,
     PREREQ_PM => {
         'Test::More' => 0,
         'PDL'        => '2.4.4',
-        'PDL::Core::Dev' => 0,
     },
-    dist                          => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
+    dist             => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
 );
 
-sub MY::postamble {pdlpp_postamble($package)};
+#sub MY::postamble {pdlpp_postamble($package)};

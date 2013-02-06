@@ -2,7 +2,6 @@ color_distance.c
 color_distance.h
 color_distance.pp
 ColorDistance.pm
-ColorDistance.xs
 Makefile.PL
 MANIFEST
 META.json

@@ -3,7 +3,7 @@ use ExtUtils::MakeMaker;
 PDL::Core::Dev->import();
 require "pdlmaker.plm";
 
-$package = ["color_distance.pp",ColorDistance,PDL::Graphics::ColorDistance];
+$package = ["color_distance.pp", ColorDistance, PDL::Graphics::ColorDistance];
 #%hash = pdlpp_stdargs($package);
 %hash = pdlmaker_init($package);
 $hash{'OBJECT'} .= ' color_distance$(OBJ_EXT)';

@@ -15,9 +15,11 @@ WriteMakefile( %hash,
 	PM => {
 		'ColorDistance.pm' => '$(INST_LIBDIR)/ColorDistance.pm',
 	},
+    CONFIGURE_REQUIRES => {
+        'PDL'        => '2.4.4',
+    },
     PREREQ_PM => {
         'Test::More' => 0,
-        'PDL'        => '2.4.4',
     },
     dist             => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
 );
